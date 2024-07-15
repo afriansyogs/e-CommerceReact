@@ -7,7 +7,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui'),
+    require('tailwindcss-filters'),
+  ],
   daisyui: {
     themes: ["light"], // Mengatur tema default menjadi 'light'
   },
