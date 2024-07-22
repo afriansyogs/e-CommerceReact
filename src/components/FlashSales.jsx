@@ -49,8 +49,8 @@ const FlashSales = () => {
                     </div>
                 </div>
             </div>
-            <div className="overflow-x-auto">
-                <div className="flex gap-8 mt-10 w-max scrollbar-hide">
+            <div className="overflow-x-auto scrollbar-hide">
+                <div className="flex gap-8 mt-10 w-max">
                     {productData.map((item, index) => (
                         <div key={index} className="group relative card bg-base-100 w-96 shadow-xl overflow-hidden">
                             <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
