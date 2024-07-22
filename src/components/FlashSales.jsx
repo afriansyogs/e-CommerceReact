@@ -13,6 +13,7 @@ const FlashSales = () => {
     }, []);
 
     return (
+        <>
         <div className="mt-14 ms-[70px]">
             <div className="flex items-center">
                 <div className="w-5 h-10 bg-red-600 rounded-md"></div>
@@ -84,8 +85,11 @@ const FlashSales = () => {
                     ))}
                 </div>
             </div>
-            haha <br />haha
+            <div className="flex justify-center mt-20">
+                <button className='w-72 h-14 rounded-md bg-red-500 text-white '>View All Products</button>
+            </div>
         </div>
+        </>
     );
 };
 
