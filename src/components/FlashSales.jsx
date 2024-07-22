@@ -49,38 +49,40 @@ const FlashSales = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex gap-8 mt-10">
-                {productData.map((item, index) => (
-                    <div key={index} className="group relative card bg-base-100 w-96 shadow-xl overflow-hidden">
-                        <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
-                            <div className="absolute top-3 left-3 w-14 h-7 bg-red-600 flex items-center justify-center rounded">
-                                <h1 className="text-white text-sm">
-                                    -{item.discount}%
-                                </h1>
-                            </div>
-                            <div className="absolute top-3 right-3">
-                                <button className=" w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-red-500 hover:text-white transition duration-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button className="mt-2 w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-black hover:text-white transition duration-200">
-                                    <i class="fa-regular fa-eye"></i>
-                                </button>
-                            </div>
-                            <img src={item.images} alt={item.productName} className="max-w-full max-h-full object-contain" />
-                        </figure>
-                        <div className="card-body">
-                            <h2 className="text-[16px] font-medium">{item.productName}</h2>
-                            <p>{item.productDescription}</p>
-                            <div className="flex">
-                                <p className='text-[16px] font-medium text-red-500'>{(item.harga - item.discount).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</p>
-                                <p className='text-[16px] font-medium text-slate-400'><s>{item.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</s></p>
-                            </div>
-                            <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-white py-2">
-                                <button className="btn btn-primary">Buy Now</button>
+            <div className="overflow-x-auto">
+                <div className="flex gap-8 mt-10 w-max scrollbar-hide">
+                    {productData.map((item, index) => (
+                        <div key={index} className="group relative card bg-base-100 w-96 shadow-xl overflow-hidden">
+                            <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
+                                <div className="absolute top-3 left-3 w-14 h-7 bg-red-600 flex items-center justify-center rounded">
+                                    <h1 className="text-white text-sm">
+                                        -{item.discount}%
+                                    </h1>
+                                </div>
+                                <div className="absolute top-3 right-3">
+                                    <button className=" w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-red-500 hover:text-white transition duration-200">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button className="mt-2 w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-black hover:text-white transition duration-200">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </button>
+                                </div>
+                                <img src={item.images} alt={item.productName} className="max-w-full max-h-full object-contain" />
+                            </figure>
+                            <div className="card-body">
+                                <h2 className="text-[16px] font-medium">{item.productName}</h2>
+                                <p>{item.productDescription}</p>
+                                <div className="flex">
+                                    <p className='text-[16px] font-medium text-red-500'>{(item.harga - item.discount).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</p>
+                                    <p className='text-[16px] font-medium text-slate-400'><s>{item.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</s></p>
+                                </div>
+                                <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-white py-2">
+                                    <button className="btn btn-primary">Buy Now</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
             haha <br />haha
         </div>
