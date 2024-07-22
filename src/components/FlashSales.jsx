@@ -86,7 +86,7 @@ const FlashSales = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-20">
-                <button className='w-72 h-14 rounded-md bg-red-500 text-white '>View All Products</button>
+                <button className='w-72 h-14 rounded-md bg-red-500 text-white '>View All Productss</button>
             </div>
         </div>
         </>
