@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Carousel from './components/Carousel';
 import FlashSales from './components/FlashSales';
+import Category from './components/Category';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Carousel />
       </div>
       <FlashSales />
+      <Category />
     </>
   )
 }

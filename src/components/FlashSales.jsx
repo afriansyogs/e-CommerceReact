@@ -12,6 +12,8 @@ const FlashSales = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const filteredProductFlashSale = productData.filter(item => item.discount > 0);
+
     return (
         <>
         <div className="mt-14 ms-[70px]">
@@ -52,7 +54,7 @@ const FlashSales = () => {
             </div>
             <div className="overflow-x-auto scrollbar-hide">
                 <div className="flex gap-8 mt-12 w-max pb-8">
-                    {productData.map((item, index) => (
+                    {filteredProductFlashSale.map((item, index) => (
                         <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden">
                             <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
                                 <div className="absolute top-3 left-3 w-14 h-7 bg-red-600 flex items-center justify-center rounded">
@@ -62,10 +64,10 @@ const FlashSales = () => {
                                 </div>
                                 <div className="absolute top-3 right-3">
                                     <button className=" w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-red-500 hover:text-white transition duration-200">
-                                        <i class="fa-regular fa-heart"></i>
+                                        <i className="fa-regular fa-heart"></i>
                                     </button>
                                     <button className="mt-2 w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-black hover:text-white transition duration-200">
-                                        <i class="fa-regular fa-eye"></i>
+                                        <i className="fa-regular fa-eye"></i>
                                     </button>
                                 </div>
                                 <img src={item.images} alt={item.productName} className="max-w-full max-h-full object-contain" />
@@ -85,12 +87,11 @@ const FlashSales = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-center mt-16">
+            <div className="flex justify-center mt-16 bg-transparent">
                 <button className='w-72 h-14 rounded-md bg-red-500 text-white border-2 hover:bg-white hover:text-red-500 hover:border-red-500 active:scale-110 transition duration-200'>View All Products</button>
             </div>
         </div>
         <div className=" border-b-2 border-base w-[91%] mx-auto mt-16"></div>
-        <div className="">haha</div>
         </>
     );
 };
