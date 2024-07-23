@@ -11,7 +11,7 @@ const Category = () => {
 
     return (
         <>
-        <div className="mt-20 ms-[70px] w-[90%]">
+        <div className="mt-20 ms-[70px] w-[90%] border-b-2 border-base-300 pb-20">
             <div className="flex items-center">
                 <div className="w-5 h-10 bg-red-600 rounded-md"></div>
                 <div className="ms-4 text-md text-red-600 font-semibold">Categories</div>
@@ -21,16 +21,19 @@ const Category = () => {
                     Browse By Category
                 </div>
             </div>
-            <div className="flex gap-8 mt-14">
-                {filterSubCategory.map((subCategory, index) => (
-                    <div key={index} className="w-40 h-36 border-2 border-black p-2 flex items-center justify-center">
-                        <div className="text-base font-semibold">
-                            {subCategory}
+            <div className="overflow-x-auto scrollbar-hide">
+                <div className="flex gap-8 mt-14 w-max">
+                    {filterSubCategory.map((subCategory, index) => (
+                        <div key={index} className="w-40 h-36 border-2 border-black p-2 flex items-center justify-center">
+                            <div className="text-base font-semibold">
+                                {subCategory}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
+        hiuhuhu
         </>
     );
 };

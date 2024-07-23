@@ -52,7 +52,7 @@ const FlashSales = () => {
                     </div>
                 </div>
             </div>
-            <div className="overflow-x-auto scrollbar-hide">
+            <div className="overflow-x-auto scrollbar-hide w-[95%]">
                 <div className="flex gap-8 mt-12 w-max pb-8">
                     {filteredProductFlashSale.map((item, index) => (
                         <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden">

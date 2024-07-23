@@ -11,6 +11,9 @@ const productData = [
     { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"SmartWach", harga: 257000 ,  icon:"", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
     { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"Camera", harga: 257000 ,  icon:"", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
     { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"HeadPhones", harga: 257000 ,  icon:"", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
+    { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"Bag", harga: 257000 ,  icon:"", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
+    { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"Jacket", harga: 257000 ,  icon:"fa-solid fa-mobile-screen-button", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
+    { productName:'S-Series Comfort Chair ', category:"Home & Lifestyle", subCategory:"Pants", harga: 257000 ,  icon:"", images: '../assets/images/product/Frame 612.png', url: 'https://example.com/yoga', },   
 ];
 
 export default productData;
