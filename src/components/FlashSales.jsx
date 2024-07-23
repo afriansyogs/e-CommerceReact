@@ -90,8 +90,9 @@ const FlashSales = () => {
             <div className="flex justify-center mt-16 bg-transparent">
                 <button className='w-72 h-14 rounded-md bg-red-500 text-white border-2 hover:bg-white hover:text-red-500 hover:border-red-500 active:scale-110 transition duration-200'>View All Products</button>
             </div>
+            <div className=" border-b-2 border-base w-[96%] mt-20"></div>
         </div>
-        <div className=" border-b-2 border-base w-[91%] mx-auto mt-16"></div>
+        {/* <div className=" border-b-2 border-base w-[91%] mx-auto mt-16"></div> */}
         </>
     );
 };
