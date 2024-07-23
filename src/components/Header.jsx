@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="bg-black w-full h-12">
+        <header className="bg-black w-full h-12">
             <div className="flex justify-center items-center pt-3">
                 <div className="text-md text-white font-light">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</div>
                 <div className="text-md text-white font-semibold ms-3">ShopNow</div>
@@ -13,11 +13,11 @@ const Header = () => {
                 <ul className='menu menu-horizontal px-1'>
                     <li>
                         <details>
-                        <summary className='text-white'>English</summary>
-                        <ul className="bg-base-100 rounded-t-none p-2">
-                            <li className='text-black'><a>Link 1</a></li>
-                            <li className='text-black'><a>Link 2</a></li>
-                        </ul>
+                            <summary className='text-white'>English</summary>
+                            <ul className="bg-base-100 rounded-t-none p-2">
+                                <li className='text-black hover:bg-black hover:text-white rounded-lg'><a>Indonesia</a></li>
+                                <li className='text-black hover:bg-black hover:text-white rounded-lg'><a>Spanyol</a></li>
+                            </ul>
                         </details>
                     </li>
                 </ul>
@@ -33,7 +33,7 @@ const Header = () => {
 
                 </div>
             </div> */}
-        </div>
+        </header>
     );
 };
 
