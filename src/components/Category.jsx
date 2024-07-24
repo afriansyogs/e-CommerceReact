@@ -4,10 +4,10 @@ import productData from './ProductData';
 
 const Category = () => {
 
-    const filterSubCategory = productData
-    .map(product => product.subCategory)
-    .filter((subCategory, index, self) => self.indexOf(subCategory) === index);
-
+    const filterSubCategory = 
+        productData.map(product => ({ subCategory: product.subCategory, icon: product.icon }))
+        .filter((subCategoryObj, index, self) => index === self.findIndex((t) => t.subCategory === subCategoryObj.subCategory)
+    );
 
     return (
         <>
@@ -23,17 +23,17 @@ const Category = () => {
             </div>
             <div className="overflow-x-auto scrollbar-hide">
                 <div className="flex gap-8 mt-14 w-max">
-                    {filterSubCategory.map((subCategory, index) => (
-                        <div key={index} className="w-40 h-36 border-2 border-black p-2 flex items-center justify-center">
+                    {filterSubCategory.map((subCategoryObj, index) => (
+                        <div key={index} className="w-40 h-36 border-2 border-black p-2 flex flex-col items-center justify-center hover:text-white hover:bg-red-500 transition duration-200">
+                        <i className={`${subCategoryObj.icon} text-2xl mb-2`}></i>
                             <div className="text-base font-semibold">
-                                {subCategory}
+                            {subCategoryObj.subCategory}
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
         </div>
-        hiuhuhu
         </>
     );
 };
