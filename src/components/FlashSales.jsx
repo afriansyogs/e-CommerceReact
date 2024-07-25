@@ -56,7 +56,7 @@ const FlashSales = () => {
                 <div className="flex gap-8 mt-12 w-max pb-8">
                     {filteredProductFlashSale.map((item, index) => (
                         <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden">
-                            <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
+                            <figure className="w-full h-48 flex justify-center items-center bg-gray-200 relative">
                                 <div className="absolute top-3 left-3 w-14 h-7 bg-red-600 flex items-center justify-center rounded">
                                     <h1 className="text-white text-sm">
                                         -{item.discount}%
@@ -71,16 +71,21 @@ const FlashSales = () => {
                                     </button>
                                 </div>
                                 <img src={item.images} alt={item.productName} className="max-w-full max-h-full object-contain" />
+                                <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-black py-2 hover:bg-gray-300 text-white hover:text-black cursor-pointer">
+                                    {/* <button className="btn btn-primary">Buy Now</button> */} 
+                                    <div className="font-bold">
+                                        Buy Now
+                                    </div>
+                                </div>
                             </figure>
-                            <div className="card-body">
-                                <h2 className="text-[16px] font-medium">{item.productName}</h2>
-                                <p>{item.productDescription}</p>
+                            <div className="card-body pt-2">
+                                <h2 className="text-[16px] font-medium mt-5">{item.productName}</h2>
                                 <div className="flex">
                                     <p className='text-[16px] font-medium text-red-500'>{(item.harga - item.discount).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</p>
                                     <p className='text-[16px] font-medium text-slate-400'><s>{item.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</s></p>
                                 </div>
-                                <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-white py-2">
-                                    <button className="btn btn-primary">Buy Now</button>
+                                <div className="text-sm font-semibold text-gray-500">
+                                    ({item.terjual})
                                 </div>
                             </div>
                         </div>
