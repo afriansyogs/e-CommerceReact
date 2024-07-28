@@ -14,20 +14,22 @@ const Navbar = () => {
             <div className="navbar-start">
                 <a className="mx-16 text-2xl font-bold">Exclusive</a>
             </div>
-            <div className="navbar-center hidden lg:flex me-12">
-                <ul className="menu menu-horizontal px-1">
+            <div className="navbar-center hidden lg:flex me-12 justify-center">
+                <ul className="menu-horizontal px-1 flex items-end justify-center space-x-5">
                     {menu.map((item, index) => (
                     item.menu === 'Sign Up' ? (
-                        <li key={index}>
-                        <button className="btn btn-sm btn-active bg-black border-2 border-black text-white hover:bg-white hover:text-black hover:border-black mt-[2px]">
-                            {item.menu}
-                        </button>
+                        <li key={index} className="flex items-center">
+                            <button className="btn btn-sm btn-active h-9 bg-black border-2 border-black text-white hover:bg-white hover:text-black hover:border-black">
+                                {item.menu}
+                            </button>
                         </li>
                     ) : (
-                        <li key={index} className="hover:text-black">
-                        <a href={item.url}>{item.menu}</a>
+                        <li key={index} className="flex items-center">
+                            <a href={item.url} className="after:content-[''] after:block after:w-full after:h-[2px] after:bg-black after:mt-[4px] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition after:duration-200">
+                                {item.menu}
+                            </a>
                         </li>
-                    )
+                        )
                     ))}
                 </ul>
             </div>
