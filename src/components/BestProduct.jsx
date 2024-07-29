@@ -1,11 +1,20 @@
 // src/components/BestProduct.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import productData from './ProductData';
+import ProductGambar from '../assets/images/Frame694.png';
 
 const BestProduct = () => {
-    // Urutkan produk berdasarkan penjualan terbanyak
+    const [counter, setCounter] = useState(60);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCounter((prevCounter) => (prevCounter > 0 ? prevCounter - 1 : 0));
+        }, 1000);
+    
+        return () => clearInterval(interval);
+    }, []);
+
     const sortedProducts = productData.sort((a, b) => b.terjual - a.terjual);
-    // Ambil 10 produk teratas
     const bestProducts = sortedProducts.slice(0, 10);
 
     return (
@@ -50,7 +59,50 @@ const BestProduct = () => {
                     ))}
                 </div>
             </div>
-            <div className="mt-32 bg-black w-full h-[500px]"></div>
+
+            {/* Banner  */}
+            <div className="mt-32 bg-black w-full h-[520px] flex flex-row">
+                <div class="w-1/2 ps-14 pt-16">
+                    <p className='text-lg text-green-400 font-semibold'>Categories</p>
+                    <div className="w-[430px] mt-6 text-white text-5xl font-semibold">
+                        <h1 className=''>Enhance Your</h1>
+                        <h1 className='mt-2'>Music Experience</h1>
+                    </div>
+                    
+                    <div className="grid grid-flow-col gap-5 mt-8 text-center auto-cols-max">
+                    <div className="flex flex-col bg-white rounded-full w-[70px] py-3">
+                        <span className="countdown font-mono text-2xl font-bold">
+                        <span className='mx-auto' style={{ "--value": 3 }}></span>
+                        </span>
+                        <div className="text-sm font-medium">Days</div>
+                    </div>
+                    <div className="flex flex-col bg-white rounded-full w-[70px] py-3">
+                        <span className="countdown font-mono text-2xl font-bold">
+                        <span className='mx-auto' style={{ "--value": 10 }}></span>
+                        </span>
+                        <div className="text-sm font-medium">Hours</div>
+                    </div>
+                    <div className="flex flex-col bg-white rounded-full w-[70px] py-3">
+                        <span className="countdown font-mono text-2xl font-bold">
+                        <span className='mx-auto' style={{ "--value": 24 }}></span>
+                        </span>
+                        <div className="text-sm font-medium">Minutes</div>
+                    </div>
+                    <div className="flex flex-col bg-white rounded-full w-[70px] py-3">
+                        <span className="countdown font-mono text-2xl font-bold">
+                        <span className='mx-auto' style={{ "--value": counter }}></span>
+                        </span>
+                        <div className="text-sm font-medium">Seconds</div>
+                    </div>
+                </div>
+                    <button class="bg-green-500 w-[200px] h-14 mt-10 rounded-sm border-[3px] border-green-500 active:scale-110 transition duration-200 text-white text-base font-medium text-center hover:text-green-400 hover:bg-white hover:border-green-500">
+                        Buy Now!
+                    </button>
+                </div>
+                <div class="w-1/2 flex items-center justify-center">
+                    <img src={ProductGambar} class="w-[560px] h-[410px] filter drop-shadow-white" alt={ProductGambar} />
+                </div>
+            </div>
             <div className="mt-10"></div>
         </div>
         </>

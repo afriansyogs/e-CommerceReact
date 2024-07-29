@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        'white': '0 0 150px rgba(255, 255, 255, 0.4)',
+      },
+    },
   },
   plugins: [
     require('daisyui'),
