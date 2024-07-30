@@ -9,6 +9,8 @@ import FlashSales from './components/FlashSales';
 import Category from './components/Category';
 import BestProduct from './components/BestProduct';
 import Footer from './components/Footer';
+import OurProduct from './components/OurProduct';
+import Featured from './components/Featured';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <FlashSales />
       <Category />
       <BestProduct />
+      <OurProduct />
+      <Featured />
       <Footer />
     </>
   )

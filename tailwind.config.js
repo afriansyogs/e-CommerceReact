@@ -8,6 +8,7 @@ export default {
     extend: {
       dropShadow: {
         'white': '0 0 150px rgba(255, 255, 255, 0.4)',
+        'grey': '0 0 320px rgba(255, 255, 255, 0.5)',
       },
     },
   },

@@ -26,42 +26,46 @@ const BestProduct = () => {
             </div>
             <div className="mt-2 flex justify-between items-end">
                 <div className="text-[36px] font-bold">
-                    Browse By Category
+                    Best Selling Products
                 </div>
                     <button className='w-40 h-14 rounded-md bg-red-500 text-white border-2 hover:bg-white hover:text-red-500 hover:border-red-500 active:scale-110 transition duration-200'>View All</button>
             </div>
             <div className="overflow-x-auto scrollbar-hide ">
                 <div className="flex gap-8 mt-12 w-max pb-8">
-                    {bestProducts.map((product, index) => (
-                        <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden">
-                            <figure className="w-full h-48 flex justify-center items-center bg-gray-200">
-                                <div className="absolute top-3 right-3">
-                                    <button className="w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-red-500 hover:text-white transition duration-200">
-                                        <i className="fa-regular fa-heart"></i>
-                                    </button>
-                                    <button className="mt-2 w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-black hover:text-white transition duration-200">
-                                        <i className="fa-regular fa-eye"></i>
-                                    </button>
-                                </div>
-                                <img src={product.images} alt={product.productName} className="max-w-full max-h-full object-contain" />
-                            </figure>
-                            <div className="card-body">
-                                <h2 className="text-[16px] font-medium">{product.productName}</h2>
-                                <p>{product.productDescription}</p>
-                                <div className="flex justify-between items-center">
-                                    <p className="text-[16px] font-medium text-red-500">{product.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</p>
-                                </div>
-                                <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-white py-2">
-                                    <button className="btn btn-primary">Buy Now</button>
-                                </div>
+                {bestProducts.slice(0, 8).map((product, index) => (
+                    <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden" data-aos="fade-up">
+                        <figure className="w-full h-48 flex justify-center items-center bg-gray-200 relative">
+                        <div className="absolute top-3 right-3">
+                            <button className="w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-red-500 hover:text-white transition duration-200">
+                            <i className="fa-regular fa-heart"></i>
+                            </button>
+                            <button className="mt-2 w-8 h-8 bg-white flex items-center justify-center rounded-full active:scale-110 hover:bg-black hover:text-white transition duration-200">
+                            <i className="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        <img src={product.images} alt={product.productName} className="max-w-full max-h-full object-contain" />
+                        <div className="absolute inset-x-0 bottom-0 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300 flex justify-center bg-black py-2 hover:bg-gray-300 text-white hover:text-black cursor-pointer">
+                            <div className="font-bold">
+                            Buy Now
                             </div>
                         </div>
-                    ))}
+                        </figure>
+                        <div className="card-body pt-2">
+                        <h2 className="text-[16px] font-medium mt-5">{product.productName}</h2>
+                        <div className="flex">
+                            <p className='text-[16px] font-medium text-red-500'>{product.harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</p>
+                        </div>
+                        <div className="text-sm font-semibold text-gray-500">
+                            ({product.terjual})
+                        </div>
+                        </div>
+                    </div>
+                ))}
                 </div>
             </div>
 
             {/* Banner  */}
-            <div className="mt-32 bg-black w-full h-[520px] flex flex-row">
+            <div className="mt-32 bg-black w-full h-[520px] flex flex-row" data-aos="zoom-in" data-aos-duration="600">
                 <div class="w-1/2 ps-14 pt-16">
                     <p className='text-lg text-green-400 font-semibold'>Categories</p>
                     <div className="w-[430px] mt-6 text-white text-5xl font-semibold">
@@ -103,7 +107,6 @@ const BestProduct = () => {
                     <img src={ProductGambar} class="w-[560px] h-[410px] filter drop-shadow-white" alt={ProductGambar} />
                 </div>
             </div>
-            <div className="mt-10"></div>
         </div>
         </>
     );

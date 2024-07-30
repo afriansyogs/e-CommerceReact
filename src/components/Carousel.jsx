@@ -6,10 +6,7 @@ const Carousel = () => {
     return (
         <div class="carousel rounded-box w-[892px] h-[392px] mt-6 mx-auto">
             <div class="carousel-item w-full">
-                <img
-                    src={CarouselGambar1}
-                    class="w-full"
-                    alt={CarouselGambar1}/>
+                <img src={CarouselGambar1} class="w-full" alt={CarouselGambar1}/>
             </div>
         </div>
     );

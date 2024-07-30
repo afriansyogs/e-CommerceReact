@@ -16,7 +16,7 @@ const FlashSales = () => {
 
     return (
         <>
-        <div className="mt-14 ms-[70px]">
+        <div className="mt-14 ms-[70px] w-[90%] border-b-2 border-base-300 pb-20">
             <div className="flex items-center">
                 <div className="w-5 h-10 bg-red-600 rounded-md"></div>
                 <div className="ms-4 text-md text-red-600 font-semibold">Today's</div>
@@ -52,10 +52,10 @@ const FlashSales = () => {
                     </div>
                 </div>
             </div>
-            <div className="overflow-x-auto scrollbar-hide w-[95%]">
+            <div className="overflow-x-auto scrollbar-hide">
                 <div className="flex gap-8 mt-12 w-max pb-8">
                     {filteredProductFlashSale.map((item, index) => (
-                        <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden">
+                        <div key={index} className="group relative card bg-base-100 w-72 shadow-xl overflow-hidden" data-aos="fade-up">
                             <figure className="w-full h-48 flex justify-center items-center bg-gray-200 relative">
                                 <div className="absolute top-3 left-3 w-14 h-7 bg-red-600 flex items-center justify-center rounded">
                                     <h1 className="text-white text-sm">
@@ -95,9 +95,7 @@ const FlashSales = () => {
             <div className="flex justify-center mt-16 bg-transparent">
                 <button className='w-72 h-14 rounded-md bg-red-500 text-white border-2 hover:bg-white hover:text-red-500 hover:border-red-500 active:scale-110 transition duration-200'>View All Products</button>
             </div>
-            <div className=" border-b-2 border-base w-[96%] mt-20"></div>
         </div>
-        {/* <div className=" border-b-2 border-base w-[91%] mx-auto mt-16"></div> */}
         </>
     );
 };
