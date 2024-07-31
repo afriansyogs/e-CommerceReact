@@ -12,7 +12,7 @@ const FlashSales = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const filteredProductFlashSale = productData.filter(item => item.discount > 0);
+    const filteredProductFlashSale = productData.filter(item => item.discount);
 
     return (
         <>

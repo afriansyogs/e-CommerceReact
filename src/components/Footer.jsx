@@ -1,9 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Qrcode1 from '../assets/images/Qrcode1.png';
 import GooglePlay from '../assets/images/GooglePlay.png';
 import AppStore from '../assets/images/AppStore.png';
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
+    const goToSignUp = () => {
+        navigate('/SignUp');
+    };
+
     return (
         <footer className="bg-black w-full h-auto p-10 text-white">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
@@ -38,7 +46,7 @@ const Footer = () => {
                     <h3 className="text-xl font-medium mb-2">Account</h3>
                     <ul>
                         <li className='py-2'><a href="#" className="text-[16px] hover:underline">My Account</a></li>
-                        <li className='py-2'><a href="#" className="text-[16px] hover:underline">Login / Register</a></li>
+                        <li className='py-2'><a onClick={goToSignUp} className="text-[16px] hover:underline cursor-pointer">Login / Register</a></li>
                         <li className='py-2'><a href="#" className="text-[16px] hover:underline">Cart</a></li>
                         <li className='py-2'><a href="#" className="text-[16px] hover:underline">Wishlist</a></li>
                         <li className='py-2'><a href="#" className="text-[16px] hover:underline">Shop</a></li>
