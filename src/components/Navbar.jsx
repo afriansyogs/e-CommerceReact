@@ -1,14 +1,22 @@
 // src/components/Header.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const menu = [
-    { menu:'Home', url: 'https://example.com/yoga', },
+    { menu:'Home', url: '/', },
     { menu:'Contact', url: 'https://example.com/yoga', },
     { menu:'About', url: 'https://example.com/yoga', },   
     { menu:'Sign Up', url: 'https://example.com/yoga', }   
 ];
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
+    const goToSignUp = () => {
+        navigate('/SignUp');
+    };
+
     return (
         <div className="navbar bg-base-100 border-b-2 border-base-300">
             <div className="navbar-start">
@@ -19,14 +27,17 @@ const Navbar = () => {
                     {menu.map((item, index) => (
                     item.menu === 'Sign Up' ? (
                         <li key={index} className="flex items-center">
-                            <button className="btn btn-sm btn-active h-9 bg-black border-2 border-black text-white hover:bg-white hover:text-black hover:border-black">
+                            <button onClick={goToSignUp} 
+                                className={`btn-sm h-9 rounded-lg border-2 active:scale-105 font-semibold transform duration-200 
+                                ${location.pathname === '/SignUp' ? 'bg-white text-black border-black' : 'bg-black text-white border-black hover:bg-white hover:text-black hover:border-black'}`}>
                                 {item.menu}
                             </button>
                         </li>
                     ) : (
                         <li key={index} className="flex items-center">
-                            <a href={item.url} className="after:content-[''] after:block after:w-full after:h-[2px] after:bg-black after:mt-[4px] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition after:duration-200">
-                                {item.menu}
+                            <a href={item.url} className={`after:content-[''] after:block after:w-full after:h-[2px] after:bg-black after:mt-[4px] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition after:duration-200 
+                            ${location.pathname === item.url ? 'after:scale-x-100' : ''}`}>
+                            {item.menu}
                             </a>
                         </li>
                         )

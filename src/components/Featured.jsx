@@ -32,7 +32,7 @@ const Featured =() => {
                         <div className="w-[242px]">
                             <p className="text-sm mt-[14px] pb-3">Black and White version of the PS5 coming out on sale.</p>
                         </div>
-                        <a href='#' className="text-base font-medium">Shop Now.</a>
+                        <a href='#' className="text-base font-medium underline underline-offset-2">Shop Now.</a>
                     </div>
                 </div>
                 <div className="w-1/2 bg-transparant">
@@ -43,7 +43,7 @@ const Featured =() => {
                             <div className="w-[220px]">
                                 <p className="text-sm mt-[14px] pb-3">Featured woman collections that give you another vibe.</p>
                             </div>
-                            <a href='#' className="text-base font-medium">Shop Now.</a>
+                            <a href='#' className="text-base font-medium underline underline-offset-2">Shop Now.</a>
                         </div>
                     </div>
                     <div className="flex flex-row gap-x-8 mt-8">
@@ -52,7 +52,7 @@ const Featured =() => {
                             <div className="absolute bottom-3 left-10 p-4 text-white">
                                 <h1 className="text-2xl font-semibold">Speakers</h1>
                                     <p className="text-sm mt-[14px] pb-3">Amazon wireless speakers</p>
-                                <a href='#' className="text-base font-medium">Shop Now.</a>
+                                <a href='#' className="text-base font-medium underline underline-offset-2">Shop Now.</a>
                             </div>
                         </div>
                         <div className="relative w-full h-[284px] bg-black flex items-center justify-center" data-aos="fade-up">
@@ -60,7 +60,7 @@ const Featured =() => {
                             <div className="absolute bottom-3 left-10 p-4 text-white">
                                 <h1 className="text-2xl font-semibold">Perfume</h1>
                                     <p className="text-sm mt-[14px] pb-3">GUCCI INTENSE OUD EDP</p>
-                                <a href='#' className="text-base font-medium">Shop Now.</a>
+                                <a href='#' className="text-base font-medium underline underline-offset-2">Shop Now.</a>
                             </div>
                         </div>
                     </div>
