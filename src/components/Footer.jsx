@@ -13,7 +13,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-black w-full h-auto p-10 text-white">
+        <footer className="bg-black w-full h-auto p-10 text-white bottom-0">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div className='ms-5'>
                     <h1 className="text-2xl font-bold mb-2">Exclusive</h1>
