@@ -9,6 +9,7 @@ import BestProduct from '../components/BestProduct';
 import Footer from '../components/Footer';
 import OurProduct from '../components/OurProduct';
 import Featured from '../components/Featured';
+import Service from '../components/Service';
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
         <BestProduct />
         <OurProduct />
         <Featured />
+        <Service />
         <Footer />
         </>
     );

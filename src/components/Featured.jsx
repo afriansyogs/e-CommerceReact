@@ -14,7 +14,7 @@ const Featured =() => {
         }
     }, []);
     return (
-        <div className="mt-16 ms-[70px] w-[90%] pb-36">
+        <div className="mt-16 ms-[70px] w-[90%] pb-10">
             <div className="flex items-center">
                 <div className="w-5 h-10 bg-red-600 rounded-md"></div>
                 <div className="ms-4 text-md text-red-600 font-semibold">Featured</div>
@@ -63,37 +63,6 @@ const Featured =() => {
                                 <a href='#' className="text-base font-medium underline underline-offset-2">Shop Now.</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-row gap-x-36 justify-center mt-24" >
-                <div className="flex flex-col items-center" data-aos="zoom-out">
-                    <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2">
-                        <i className="fa-solid fa-truck-fast fa-lg"></i>
-                    </div>
-                    <div className='items-center justify-center'>
-                        <h1 className='font-semibold text-xl text-center'>FREE AND FAST DELIVERY</h1>
-                        <p className='text-sm text-center'>Free delivery for all orders over $140</p>
-                    </div>
-                </div>
-                
-                <div className="flex flex-col items-center" data-aos="zoom-out">
-                    <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2">
-                        <i className="fa-solid fa-headset fa-xl"></i>
-                    </div>
-                    <div className='items-center justify-center'>
-                        <h1 className='font-semibold text-xl text-center'>24/7 CUSTOMER SERVICE</h1>
-                        <p className='text-sm text-center'>Friendly 24/7 customer support</p>
-                    </div>
-                </div>
-                
-                <div className="flex flex-col items-center" data-aos="zoom-out">
-                    <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2">
-                        <i className="fa-solid fa-hand-holding-dollar fa-xl"></i>
-                    </div>
-                    <div className='items-center justify-center'>
-                        <h1 className='font-semibold text-xl text-center'>MONEY BACK GUARANTEE</h1>
-                        <p className='text-sm text-center'>We reurn money within 30 days</p>
                     </div>
                 </div>
             </div>
