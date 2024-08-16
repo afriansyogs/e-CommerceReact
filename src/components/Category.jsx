@@ -24,7 +24,7 @@ const Category = () => {
             <div className="overflow-x-auto scrollbar-hide">
                 <div className="flex gap-8 mt-14 w-max">
                     {filterSubCategory.map((subCategoryObj, index) => (
-                        <div key={index} className="w-40 h-36 border-2 border-black p-2 flex flex-col items-center justify-center hover:text-white hover:bg-red-500 transition duration-200" data-aos="zoom-in" data-aos-duration="500">
+                        <div key={index} className="w-40 h-36 border-2 border-black p-2 flex flex-col items-center justify-center hover:text-white hover:bg-red-500 transition duration-200 cursor-pointer" data-aos="zoom-in" data-aos-duration="500">
                         <i className={`${subCategoryObj.icon} text-2xl mb-2`}></i>
                             <div className="text-base font-semibold">
                             {subCategoryObj.subCategory}
