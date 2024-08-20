@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import AboutStory from '../components/AboutStory';
 import CardStatistic from '../components/CardStatistic';
 import Service from '../components/Service';
+import Founder from '../components/Founder';
 
 const About = () => {
     return (
@@ -13,6 +14,7 @@ const About = () => {
         <Navbar />
         <AboutStory />
         <CardStatistic />
+        <Founder />
         <Service />
         <Footer />
         </>
