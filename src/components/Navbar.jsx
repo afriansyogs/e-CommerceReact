@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const menu = [
     { menu:'Home', url: '/', },
-    { menu:'Contact', url: 'https://example.com/yoga', },
+    { menu:'Contact', url: '/Contact', },
     { menu:'About', url: '/About', },   
     { menu:'Sign Up', url: 'https://example.com/yoga', }   
 ];

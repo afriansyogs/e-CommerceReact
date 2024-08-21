@@ -9,11 +9,11 @@ const Founder = () => {
     ];
 
     return (
-        <div className="flex justify-center w-full gap-32 pt-24">
+        <div className="flex justify-center w-full gap-44 pt-28 pb-16">
             {founderData.map((item, index) => (
-                <div key={index} className="flex flex-col items-center">
-                    <div className="relative w-56 h-44 rounded-t-full bg-red-500">
-                        <img src={item.founderImg} alt={item.founderName} className="absolute bottom-0 left-0 w-full h-72 object-cover rounded-t-full" />
+                <div key={index} className="flex flex-col items-center" data-aos="fade-up" data-aos-duration="600">
+                    <div className="relative w-72 h-56 rounded-t-full bg-red-500">
+                        <img src={item.founderImg} alt={item.founderName} className="absolute bottom-0 left-0 w-full h-[385px] object-cover rounded-t-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-5" />
                     </div>
                     <div className="text-center mt-2">
                         <h1 className="text-black font-bold text-lg">{item.founderName}</h1>

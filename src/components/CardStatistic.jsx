@@ -11,7 +11,7 @@ const CardStatistic = () => {
 {/* <i class="fa-solid fa-shop"></i> */}
 
     return (
-            <div className="flex flex-row gap-x-16 justify-center mb-32">
+            <div className="flex flex-row gap-x-16 justify-center mb-32" data-aos="zoom-in" data-aos-duration="500">
                 <div className="flex flex-col items-center justify-center w-64 h-60 border-2 border-black bg-transparent hover:bg-red-500 hover:text-white text-black group transition duration-105">
                     <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2 group-hover:border-red-300 group-hover:bg-white">
                         <i className="fa-solid fa-truck-fast fa-lg group-hover:text-black transition"></i>
