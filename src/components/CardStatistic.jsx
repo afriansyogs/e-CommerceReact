@@ -14,7 +14,8 @@ const CardStatistic = () => {
             <div className="flex flex-row gap-x-16 justify-center mb-32" data-aos="zoom-in" data-aos-duration="500">
                 <div className="flex flex-col items-center justify-center w-64 h-60 border-2 border-black bg-transparent hover:bg-red-500 hover:text-white text-black group transition duration-105">
                     <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2 group-hover:border-red-300 group-hover:bg-white">
-                        <i className="fa-solid fa-truck-fast fa-lg group-hover:text-black transition"></i>
+                        {/* <i className="fa-solid fa-truck-fast fa-lg group-hover:text-black transition"></i> */}
+                        <i class="fa-solid fa-shop fa-lg group-hover:text-black transition"></i>
                     </div>
                     <div className='items-center justify-center'>
                         <h1 className='mt-2 font-bold text-3xl text-center'>10.5k </h1>
@@ -24,7 +25,7 @@ const CardStatistic = () => {
                 
                 <div className="flex flex-col items-center justify-center w-64 h-60 border-2 border-black bg-transparent hover:bg-red-500 hover:text-white group transition duration-105">
                     <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2 group-hover:border-red-300 group-hover:bg-white">
-                        <i className="fa-solid fa-headset fa-xl group-hover:text-black transition"></i>
+                        <i className="fa-solid fa-money-bill-trend-up fa-xl group-hover:text-black transition"></i>
                     </div>
                     <div className='items-center justify-center'>
                         <h1 className='mt-2 font-bold text-3xl text-center'>33k</h1>
@@ -43,7 +44,7 @@ const CardStatistic = () => {
                 </div>
                 <div className="flex flex-col items-center justify-center w-64 h-60 border-2 border-black bg-transparent hover:bg-red-500 hover:text-white group transition duration-105">
                     <div className="w-20 h-20 rounded-full bg-black border-8 border-gray-300 text-xl text-white flex items-center justify-center mb-2 group-hover:border-red-300 group-hover:bg-white">
-                        <i className="fa-solid fa-hand-holding-dollar fa-xl group-hover:text-black transition"></i>
+                        <i className="fa-solid fa-sack-dollar fa-xl group-hover:text-black transition"></i>
                     </div>
                     <div className='items-center justify-center'>
                         <h1 className='mt-2 font-bold text-3xl text-center'>25k</h1>
